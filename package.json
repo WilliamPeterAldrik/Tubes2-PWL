@@ -12,5 +12,8 @@
   "type": "commonjs",
   "dependencies": {
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
