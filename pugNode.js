@@ -6,7 +6,7 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './pages');
 
-const myRouter = require('./routes/route');
+const myRouter = require('./route/route');
 
 app.use(express.urlencoded({extended: false}));
 app.use(myRouter);
