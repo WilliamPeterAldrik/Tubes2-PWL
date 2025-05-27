@@ -8,7 +8,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1')
   meta(name='viewport' content='initial-scale=1, maximum-scale=1')
   // site metas
-  title A World
+  title Dashboard
   meta(name='keywords' content='')
   meta(name='description' content='')
   meta(name='author' content='')
@@ -36,30 +36,30 @@ head
     .mobile_menu
       nav.navbar.navbar-expand-lg.navbar-light.bg-light
         .logo_mobile
-          a(href='index.html')
+          a(href='/')
             img(src='../images/logo.png')
         button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarNav.collapse.navbar-collapse
           ul.navbar-nav
             li.nav-item
-              a.nav-link(href='index.html') Home
+              a.nav-link(href='/') Home
             li.nav-item
-              a.nav-link(href='services.html') Events
+              a.nav-link(href='/events') Events
             li.nav-item
-              a.nav-link(href='login.html') login
+              a.nav-link(href='/login') login
     .container-fluid
       .logo
-        a(href='index.html')
+        a(href='/')
           img(src='../images/logo.png')
       .menu_main
         ul
           li.active
-            a(href='index.html') Home
+            a(href='/') Home
           li
-            a(href='services.html') Events
+            a(href='/events') Events
           li
-            a(href='login.html') Login/signup
+            a(href='/login') Login/signup
   // banner section start
   .banner_section.layout_padding
     #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
@@ -113,7 +113,7 @@ head
           .btn_main
             a(href='#') Hack Event
 // services section end
-// copyright section end
+
 // Javascript files
 script(src='js/jquery.min.js')
 script(src='js/popper.min.js')

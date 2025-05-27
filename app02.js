@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-const myRouter = require('./route/route.js');
+const myRouter = require('./routes/route.js');
 
 app.use(express.urlencoded({ 
     extended: false 

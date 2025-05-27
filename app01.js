@@ -1,3 +1,4 @@
+// database connection node js
 const mysql = require("mysql")
 
 const connection = mysql.createConnection({

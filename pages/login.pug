@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' href='../css/style2.css')
+        title Login
+    body
+        .wrapper
+            .title-text
+                .title.login Login Member
+            .form-container
+                .form-inner
+                    form.login(action='#')
+                        .field
+                            input(type='text' placeholder='Email Address' required='')
+                        .field
+                            input(type='password' placeholder='Password' required='')
+
+                        .field.btn
+                            .btn-layer
+                            input(type='submit' value='Login')
+                        .signup-link
+                            | Not a member? 
+                            a(href='/register') Sign Up now
