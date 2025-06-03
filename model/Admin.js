@@ -9,7 +9,6 @@ const dataAdmin = [
 
 class Admin {
     constructor() {
-        // Initialization if needed
     }
 
     all() {
@@ -20,3 +19,5 @@ class Admin {
         dataAdmin.push(newAdmin);
     }
 }
+
+module.exports = Admin;

@@ -21,3 +21,5 @@ class Events {
         dataEvents.push(newEvent);
     }
 }
+
+module.exports = Events;

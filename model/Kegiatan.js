@@ -21,3 +21,5 @@ class Kegiatan {
         dataKegiatan.push(dataKegiatanBaru);
     }
 }
+
+module.exports = Kegiatan;
