@@ -29,7 +29,8 @@ head
   // owl stylesheets
   link(rel='stylesheet' href='../css/owl.carousel.min.css')
   link(rel='stylesheet' href='../css/owl.theme.default.min.css')
-  link(rel='stylesheet' href='../https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' media='screen')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/...')
+
 // header section start
 .header_section
   .header_main
@@ -80,14 +81,19 @@ head
             th Nama Event
             th Tanggal
             th Lokasi
+            th Biaya Regis
+            th Peserta Maksimal
+            th Deadline Registrasi
             th Aksi
         tbody
-          tr
-            td 1
-            td Seminar AI
-            td 2025-06-01
-            td Aula Kampus
-            td
+          each events in data
+            tr
+              td #{events.id_event}
+              td #{events.nama_event}
+              td #{events.lokasi}
+              td #{events.biaya_regis}
+              td #{events.perserta_maks}
+              td #{events.deadline_regis}
               button.btn.btn-warning.btn-sm Edit
               button.btn.btn-danger.btn-sm Hapus
           // Tambahkan baris lain sesuai data

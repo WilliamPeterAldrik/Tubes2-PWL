@@ -71,24 +71,28 @@ html(lang='en')
     .container
         h2.section_title.mt-6 Manajemen Anggota - Keuangan
         .text-right.mb-3
-            button.btn.btn-success + Tambah Anggota
+        a.btn.btn-primary.btn-round.ms-auto(href="/admin/create")
+        i.fa.fa-plus
+        |  Add Keuangan
+
         table.table.table-bordered
             thead
                 tr
-                    th No
+                    th Id
                     th Nama
-                    th Jumlah
-                    th Tanggal
+                    th Email
+                    th Password
                     th Aksi
             tbody
-                tr
-                    td 1
-                    td Budi
-                    td Rp 1.000.000
-                    td 2025-05-19
-                    td
-                        button.btn.btn-primary.btn-sm Edit
-                        button.btn.btn-danger.btn-sm Delete
+                each dataKeuangan in data
+                    tr
+                        td #{dataKeuangan.Id}
+                        td #{dataKeuangan.Nama}
+                        td #{dataKeuangan.email}
+                        td #{dataKeuangan.password}
+                        td
+                            button.btn.btn-primary.btn-sm Edit
+                            button.btn.btn-danger.btn-sm Delete
                 // Tambah baris data lainnya di sini
         h2.section_title.mt-5 Manajemen Anggota - Kegiatan
         .text-right.mb-3
@@ -96,20 +100,21 @@ html(lang='en')
         table.table.table-bordered
             thead
                 tr
-                    th No
+                    th Id
                     th Nama
-                    th Kegiatan
-                    th Tanggal
+                    th Email
+                    th Password
                     th Aksi
             tbody
-                tr
-                    td 1
-                    td Sari
-                    td Pelatihan Desain
-                    td 2025-05-18
-                    td
-                        button.btn.btn-primary.btn-sm Edit
-                        button.btn.btn-danger.btn-sm Delete
+                each dataKegiatan in data
+                    tr
+                        td #{dataKegiatan.Id}
+                        td #{dataKegiatan.Nama}
+                        td #{dataKegiatan.email}
+                        td #{dataKegiatan.password}
+                        td
+                            button.btn.btn-primary.btn-sm Edit
+                            button.btn.btn-danger.btn-sm Delete
 // Tambah baris data lainnya di sini
 
 // Javascript files

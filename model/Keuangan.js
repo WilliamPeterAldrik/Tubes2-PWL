@@ -8,7 +8,7 @@ const dataKeuangan = [
     },
 ]
 class Keuangan {
-    construcrot(){
+    constructor(){
 
     }
 

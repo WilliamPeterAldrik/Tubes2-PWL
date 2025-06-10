@@ -1,32 +1,40 @@
-const Events = require('../model/Events');
+const Events = require('../model/Events');// Sesuaikan dengan path model Event-mu
 
 const index = (req, res) => {
-    const events = new Events();
-    res.render(
-        'events/events',  {
-            data : events.all()
-        }
-    )
-}
+    const event = new Events();
+    event.all(events => {
+        res.render('kegiatan/kegiatan', { data: events });
+    });
+};
+
 
 const create = (req, res) => {
-    res.render(
-        'events/create'
-    )
-}
+    res.render('kegiatan/create'); // Pastikan file Pug `create.pug` ada di folder `views/kegiatan`
+};
 
 const store = (req, res) => {
-    const eventsBaru = new Events();
-    eventsBaru.save({
+    const eventBaru = new Event();
+    eventBaru.save({
         id_event: req.body.id_event,
         nama_event: req.body.nama_event,
         lokasi: req.body.lokasi,
         poster: req.body.poster,
         biaya_regis: req.body.biaya_regis,
-        peserta_maks: req.body.peserta_maks,
-        deadline_regis: req.body.deadline_regis
-    })
-    res.redirect('/events');
-}
+        peserta_maks: req.body.perserta_maks,
+        deadline_regis: req.body.deadline_regis,
+    }, (err, resultId) => {
+        if (err) {
+            return res.render('kegiatan/create', {
+                error: 'Gagal menyimpan event. Silakan coba lagi.'
+            });
+        }
+        console.log('Event berhasil disimpan dengan ID:', resultId);
+        res.redirect('/event'); // Ubah sesuai routing-mu
+    });
+};
 
-module.exports = {index, create, store}
+module.exports = {
+    index,
+    create,
+    store
+};
