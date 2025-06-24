@@ -79,10 +79,9 @@ head
           tr
             th No
             th Nama Event
-            th Tanggal
             th Lokasi
+            th Poster
             th Biaya Regis
-            th Peserta Maksimal
             th Deadline Registrasi
             th Aksi
         tbody
@@ -91,8 +90,8 @@ head
               td #{events.id_event}
               td #{events.nama_event}
               td #{events.lokasi}
+              td #{events.poster}
               td #{events.biaya_regis}
-              td #{events.perserta_maks}
               td #{events.deadline_regis}
               button.btn.btn-warning.btn-sm Edit
               button.btn.btn-danger.btn-sm Hapus

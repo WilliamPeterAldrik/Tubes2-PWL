@@ -14,7 +14,7 @@ router.use(express.static('public'));
 //     res.render('kegiatan/kegiatan');
 // })
 
-router.get('/kegiatan', eventsController.index)
+router.get('/kegiatan', kegiatanController.index)
 
 router.get('/kegiatan/create', kegiatanController.create)
 

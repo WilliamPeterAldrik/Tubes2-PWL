@@ -3,13 +3,13 @@ const Events = require('../model/Events');// Sesuaikan dengan path model Event-m
 const index = (req, res) => {
     const event = new Events();
     event.all(events => {
-        res.render('kegiatan/kegiatan', { data: events });
+        res.render('events/events', { data: events });
     });
 };
 
 
 const create = (req, res) => {
-    res.render('kegiatan/create'); // Pastikan file Pug `create.pug` ada di folder `views/kegiatan`
+    res.render('events/create'); // Pastikan file Pug `create.pug` ada di folder `views/events`
 };
 
 const store = (req, res) => {
@@ -24,7 +24,7 @@ const store = (req, res) => {
         deadline_regis: req.body.deadline_regis,
     }, (err, resultId) => {
         if (err) {
-            return res.render('kegiatan/create', {
+            return res.render('events/create', {
                 error: 'Gagal menyimpan event. Silakan coba lagi.'
             });
         }
