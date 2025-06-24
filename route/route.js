@@ -63,6 +63,11 @@ router.get("/login", (req, res) => {
     res.render('login');
 })
 
+// go to dashboard admin
+router.get("/dashboardAdmin", (req, res) => {
+    res.render('dashboardAdmin');
+})
+
 // go to dashboard
 router.get("/", (req, res) => {
     res.render('dashboard');

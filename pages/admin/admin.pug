@@ -37,28 +37,33 @@ html(lang='en')
             .mobile_menu.d-lg-none
                 nav.navbar.navbar-expand-lg.navbar-light.bg-light
                     .logo_mobile
-                        a(href='/')
-                            img(src='../images/logo.png')
+                        a(href='/dashboardAdmin')
+                            h1.banner_taital Eventify
                     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
                         span.navbar-toggler-icon
                     #navbarNav.collapse.navbar-collapse
                         ul.navbar-nav
                             li.nav-item
-                                a.nav-link(href='/') Home
+                                a.nav-link(href='/dashboardAdmin') Home
+                            li.nav-item
+                                a.nav-link(href='/admin') Admin
                             li.nav-item
                                 a.nav-link(href='/keuangan') Keuangan
                             li.nav-item
                                 a.nav-link(href='/kegiatan') Kegiatan
                             li.nav-item
                                 a.nav-link(href='/events') Events
+                                
             .container-fluid.d-none.d-lg-block
                 .logo
-                    a(href='/')
-                        img(src='../images/logo.png')
+                    a(href='/dashboardAdmin')
+                        h1.banner_taital Eventify
                 .menu_main
                     ul
                         li.active
-                            a(href='/') Home
+                            a(href='/dashboardAdmin') Home
+                        li
+                            a(href='/admin') Admin
                         li
                             a(href='/keuangan') Keuangan
                         li
@@ -69,7 +74,7 @@ html(lang='en')
     // Tambahkan setelah header section end atau sebelum footer
 .admin_section.layout_padding
     .container
-        h2.section_title.mt-6 Manajemen Anggota - Keuangan
+        h2.section_title.mt-10 Manajemen Anggota - Keuangan
         .text-right.mb-3
         a.btn.btn-primary.btn-round.ms-auto(href="/admin/create")
         i.fa.fa-plus

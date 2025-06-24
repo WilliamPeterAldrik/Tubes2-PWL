@@ -43,11 +43,15 @@ head
         #navbarNav.collapse.navbar-collapse
           ul.navbar-nav
             li.nav-item
-              a.nav-link(href='/') Home
+              a.nav-link(href='/dashboardAdmin') Home
             li.nav-item
               a.nav-link(href='/admin') Admin
             li.nav-item
-              a.nav-link(href='/login') login
+              a.nav-link(href='/keuangan') Keuangan
+            li.nav-item
+              a.nav-link(href='/kegiatan') Kegiatan
+            li.nav-item
+              a.nav-link(href='/events') Events
     .container-fluid
       .logo
         a(href='/')
@@ -55,64 +59,24 @@ head
       .menu_main
         ul
           li.active
-            a(href='/') Home
+            a(href='/dashboardAdmin') Home
+          li
+            a(href='/admin') Admin
+          li
+            a(href='/keuangan') Keuangan
+          li
+            a(href='/kegiatan') Kegiatan
           li
             a(href='/events') Events
-          li
-            a(href='/login') Login/signup
+            
   // banner section start
   .banner_section.layout_padding
-    #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
-      .carousel-inner
-        .carousel-item.active
-          .container
-            h1.banner_taital Adventure
-            p.banner_text
-              | There are many variations of passages of Lorem Ipsum available, but the
-              | majority have sufferedThere are ma available, but the majority have suffered
-            .read_bt
-              a(href='#') Get A Quote
-        .carousel-item
-          .container
-            h1.banner_taital Adventure
-            p.banner_text
-              | There are many variations of passages of Lorem Ipsum available, but the
-              | majority have sufferedThere are ma available, but the majority have suffered
-            .read_bt
-              a(href='#') Get A Quote
-        .carousel-item
-          .container
-            h1.banner_taital Adventure
-            p.banner_text
-              | There are many variations of passages of Lorem Ipsum available, but the
-              | majority have sufferedThere are ma available, but the majority have suffered
-            .read_bt
-              a(href='#') Get A Quote
+    .container
+      h1.banner_taital Welcome to Eventify Admin Page
+      p.banner_text
+        | Seamless Events, Effortless Planning
   // banner section end
 // header section end
-// services section start
-.services_section.layout_padding
-  .container
-    h1.services_taital Events 
-    p.services_text There are Many Event that we have 
-    .services_section_2
-      .row
-        .col-md-4
-          div
-            img.services_img(src='../images/img-1.png')
-          .btn_main
-            a(href='#') GoDrive Event
-        .col-md-4
-          div
-            img.services_img(src='../images/img-2.png')
-          .btn_main.active
-            a(href='#') Game Event
-        .col-md-4
-          div
-            img.services_img(src='../images/img-3.png')
-          .btn_main
-            a(href='#') Hack Event
-// services section end
 
 // Javascript files
 script(src='js/jquery.min.js')

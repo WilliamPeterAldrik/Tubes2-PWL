@@ -1,128 +1,130 @@
 doctype html
-head
-  // basic
-  meta(charset='utf-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  // mobile metas
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  meta(name='viewport' content='initial-scale=1, maximum-scale=1')
-  // site metas
-  title Dashboard
-  meta(name='keywords' content='')
-  meta(name='description' content='')
-  meta(name='author' content='')
-  // bootstrap css
-  link(rel='stylesheet' type='text/css' href='../css/bootstrap.min.css')
-  // style css
-  link(rel='stylesheet' type='text/css' href='../css/style.css')
-  // Responsive
-  link(rel='stylesheet' href='../css/responsive.css')
-  // fevicon
-  link(rel='icon' href='../images/fevicon.png' type='image/gif')
-  // Scrollbar Custom CSS
-  link(rel='stylesheet' href='../css/jquery.mCustomScrollbar.min.css')
-  // Tweaks for older IEs
-  link(rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
-  // fonts
-  link(href='https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap' rel='stylesheet')
-  // owl stylesheets
-  link(rel='stylesheet' href='../css/owl.carousel.min.css')
-  link(rel='stylesheet' href='../css/owl.theme.default.min.css')
-  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' media='screen')
-// header section start
-.header_section
-  .header_main
-    .mobile_menu
-      nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        .logo_mobile
-          a(href='/')
-            img(src='../images/logo.png')
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarNav.collapse.navbar-collapse
-          ul.navbar-nav
-            li.nav-item
-              a.nav-link(href='/') Home
-            li.nav-item
-              a.nav-link(href='/events') Events
-            li.nav-item
-              a.nav-link(href='/login') login
-    .container-fluid
-      .logo
-        a(href='/')
-          img(src='../images/logo.png')
-      .menu_main
-        ul
-          li.active
-            a(href='/') Home
-          li
-            a(href='/events') Events
-          li
-            a(href='/login') Login/signup
-  // banner section start
-  .banner_section.layout_padding
-    #carouselExampleSlidesOnly.carousel.slide(data-ride='carousel')
-      .carousel-inner
-        .carousel-item.active
-          .container
-            h1.banner_taital Adventure
-            p.banner_text
-              | There are many variations of passages of Lorem Ipsum available, but the
-              | majority have sufferedThere are ma available, but the majority have suffered
-            .read_bt
-              a(href='#') Get A Quote
-        .carousel-item
-          .container
-            h1.banner_taital Adventure
-            p.banner_text
-              | There are many variations of passages of Lorem Ipsum available, but the
-              | majority have sufferedThere are ma available, but the majority have suffered
-            .read_bt
-              a(href='#') Get A Quote
-        .carousel-item
-          .container
-            h1.banner_taital Adventure
-            p.banner_text
-              | There are many variations of passages of Lorem Ipsum available, but the
-              | majority have sufferedThere are ma available, but the majority have suffered
-            .read_bt
-              a(href='#') Get A Quote
-  // banner section end
-// header section end
-// services section start
-.services_section.layout_padding
-  .container
-    h1.services_taital Events 
-    p.services_text There are Many Event that we have 
-    .services_section_2
-      .row
-        .col-md-4
-          div
-            img.services_img(src='../images/img-1.png')
-          .btn_main
-            a(href='#') GoDrive Event
-        .col-md-4
-          div
-            img.services_img(src='../images/img-2.png')
-          .btn_main.active
-            a(href='#') Game Event
-        .col-md-4
-          div
-            img.services_img(src='../images/img-3.png')
-          .btn_main
-            a(href='#') Hack Event
-// services section end
+html
+  head
+    // basic
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    // mobile metas
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='initial-scale=1, maximum-scale=1')
+    // site metas
+    title Home
+    meta(name='keywords' content='')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    // bootstrap css
+    link(rel='stylesheet' type='text/css' href='../css/bootstrap.min.css')
+    // style css
+    link(rel='stylesheet' type='text/css' href='../css/style.css')
+    // Responsive
+    link(rel='stylesheet' href='../css/responsive.css')
+    // fevicon
+    link(rel='icon' href='../images/fevicon.png' type='image/gif')
+    // Scrollbar Custom CSS
+    link(rel='stylesheet' href='../css/jquery.mCustomScrollbar.min.css')
+    // Tweaks for older IEs
+    link(rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+    // fonts
+    link(href='https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap' rel='stylesheet')
+    // owl stylesheets
+    link(rel='stylesheet' href='../css/owl.carousel.min.css')
+    link(rel='stylesheet' href='../css/owl.theme.default.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' media='screen')
+    style.
+      .auth-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .auth-btn {
+        padding: 15px 40px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+      .login-btn {
+        background-color:rgb(76, 107, 175);
+        color: white;
+      }
+      .register-btn {
+        background-color:rgb(15, 55, 87);
+        color: white;
+      }
+      .auth-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      .auth-btn:active {
+        transform: translateY(-1px);
+      }
 
-// Javascript files
-script(src='js/jquery.min.js')
-script(src='js/popper.min.js')
-script(src='js/bootstrap.bundle.min.js')
-script(src='js/jquery-3.0.0.min.js')
-script(src='js/plugin.js')
-// sidebar
-script(src='js/jquery.mCustomScrollbar.concat.min.js')
-script(src='js/custom.js')
-// javascript
-script(src='js/owl.carousel.js')
-script(src='https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')
+  body
+    // header section start
+    .header_section
+      .header_main
+        .mobile_menu
+          .logo
+            a(href='/')
+              img(src='../images/logo.png')
+          .menu_main
+            ul
+              li.active
+                a(href='/') Home
+              li
+                a(href='/login') Login/signup
+      // banner section start
+      .banner_section.layout_padding
+        .container
+          h1.banner_taital Welcome to Eventify
+          p.banner_text
+            | Seamless Events, Effortless Planning
+          .auth-buttons
+            a.auth-btn.login-btn(href='/login') Login
+            a.auth-btn.register-btn(href='/register') Register
+      // banner section end
+    // header section end
+
+    // services section start
+    .services_section.layout_padding
+      .container
+        h1.services_taital Events 
+        p.services_text There are many events we have 
+        .services_section_2
+          .row
+            .col-md-4
+              div
+                img.services_img(src='../images/img-1.png')
+              .btn_main
+                a(href='#') GoDrive Event
+            .col-md-4
+              div
+                img.services_img(src='../images/img-2.png')
+              .btn_main.active
+                a(href='#') Game Event
+            .col-md-4
+              div
+                img.services_img(src='../images/img-3.png')
+              .btn_main
+                a(href='#') Hack Event
+    // services section end
+
+    // Javascript files
+    script(src='js/jquery.min.js')
+    script(src='js/popper.min.js')
+    script(src='js/bootstrap.bundle.min.js')
+    script(src='js/jquery-3.0.0.min.js')
+    script(src='js/plugin.js')
+    // sidebar
+    script(src='js/jquery.mCustomScrollbar.concat.min.js')
+    script(src='js/custom.js')
+    // javascript
+    script(src='js/owl.carousel.js')
+    script(src='https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')

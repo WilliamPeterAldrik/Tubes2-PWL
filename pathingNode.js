@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
     let fileLocation
     switch (d.pathname) {
         case "/":
-            fileLocation = "pages/dashboard.pug"
+            fileLocation = "pages/home.pug"
             break;
         case "/dashboard":
             fileLocation = "pages/dashboardAdmin.pug"
@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
             fileLocation = "pages/register.pug"
             break;
         default:
-            fileLocation = "pages/dashboard.pug"
+            fileLocation = "pages/home.pug"
     }
 })
 server.listen(8888, () => {
