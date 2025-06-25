@@ -5,7 +5,8 @@ const app = express();
 
 app.set('view engine', 'pug');
 app.set('views', './pages');
-
+app.use(express.static('public'));
+app.use('/uploads', express.static('public/uploads'));
 const myRouter = require('./route/route.js');
 
 app.use(express.urlencoded({extended: false}));

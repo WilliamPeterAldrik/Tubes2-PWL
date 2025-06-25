@@ -3,14 +3,14 @@ const mysql     = require('mysql');
 const dbConfig  = require('../config/mysql.config');
 
 class User {
-  constructor () {
+  constructor() {
     this.db = mysql.createConnection(dbConfig.db);
     this.db.connect(err => {
       if (err) throw err;
-      console.log('Connected to the database (User)!');
-    });
+      console.log("MySQL connected (User)");
+    }); 
   }
-
+  
   /**
    * Ambil semua user → callback(error, hasilArray)
    */

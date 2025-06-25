@@ -1,0 +1,65 @@
+doctype html
+html(lang='en')
+  head
+    // ========  HEAD (CSS) ========
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Kelola Event
+    link(rel='stylesheet', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', href='../css/style.css')
+    link(rel='stylesheet', href='../css/responsive.css')
+    link(rel='stylesheet', href='../css/jquery.mCustomScrollbar.min.css')
+    link(rel='stylesheet', href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+    link(href='https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='../css/owl.carousel.min.css')
+    link(rel='stylesheet', href='../css/owl.theme.default.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css')
+
+  body
+    // ========  HEADER ========
+    h1.text-center.mt-4.mb-4 EVENTIFY – Staff Kegiatan
+
+    .container.mt-4
+      a.btn.btn-success.mb-3(href='/events/create') Tambah Event
+
+      if error
+        .alert.alert-danger= error
+      if success
+        .alert.alert-success= success
+
+      if events && events.length
+        table.table.table-bordered.table-hover
+          thead.bg-dark.text-white
+            tr
+              th ID
+              th Nama Event
+              th Lokasi
+              th Buka Regis
+              th Deadline
+              th Aksi
+          tbody
+            each ev in events
+              tr
+                td #{ev.id_event}
+                td #{ev.nama_event}
+                td #{ev.lokasi}
+                td #{ev.tgl_buka_regis}
+                td #{ev.deadline_regis}
+                td
+                  a.btn.btn-warning.btn-sm.mr-2(href=`/event/edit/${ev.id_event}`) Edit
+                  form(method='POST', action=`/event/delete/${ev.id_event}`, style='display:inline;')
+                    button.btn.btn-danger.btn-sm(type='submit', onclick="return confirm('Yakin hapus event?')") Hapus
+      else
+        p.text-center Belum ada event yang dibuat.
+
+    // ========  JS ========
+    script(src='../js/jquery.min.js')
+    script(src='../js/popper.min.js')
+    script(src='../js/bootstrap.bundle.min.js')
+    script(src='../js/jquery-3.0.0.min.js')
+    script(src='../js/plugin.js')
+    script(src='../js/jquery.mCustomScrollbar.concat.min.js')
+    script(src='../js/custom.js')
+    script(src='../js/owl.carousel.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js')

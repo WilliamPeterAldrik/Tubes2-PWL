@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Tambah Event
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+
+  body.container.mt-5
+    h2.mb-4 Tambah Event
+
+    if error
+      .alert.alert-danger= error
+
+    form(method='POST', action='/events/create', enctype='multipart/form-data')
+      .mb-3
+        label.form-label(for='nama_event') Nama Event
+        input.form-control(type='text', name='nama_event', id='nama_event', required)
+
+      .mb-3
+        label.form-label(for='lokasi') Lokasi
+        input.form-control(type='text', name='lokasi', id='lokasi', required)
+
+      .mb-3
+        label.form-label(for='poster') Poster (JPG/PNG)
+        input.form-control(type='file', name='poster', id='poster', accept='image/*')
+
+      .row
+        .col-md-6.mb-3
+          label.form-label(for='tgl_buka_regis') Tgl Buka Registrasi
+          input.form-control(type='date', name='tgl_buka_regis', id='tgl_buka_regis')
+        .col-md-6.mb-3
+          label.form-label(for='deadline_regis') Deadline Registrasi
+          input.form-control(type='date', name='deadline_regis', id='deadline_regis')
+
+      .row
+        .col-md-6.mb-3
+          label.form-label(for='biaya_regis') Biaya Registrasi
+          input.form-control(type='number', name='biaya_regis', id='biaya_regis')
+        .col-md-6.mb-3
+          label.form-label(for='peserta_maks') Kuota Peserta
+          input.form-control(type='number', name='peserta_maks', id='peserta_maks')
+
+      button.btn.btn-success(type='submit') Simpan
+      a.btn.btn-secondary.ms-2(href='/events/manage') Batal
+
+    script(src='/js/bootstrap.bundle.min.js')
