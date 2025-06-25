@@ -25,13 +25,12 @@ router.get('/user/delete/:id', userController.destroy);
 // router.get("/events", (req, res) => {
 //     res.render('events/events');
 // })
-router.get('events/manage', eventsController.manage); // go to manage events page
+
 router.get('/events', eventsController.index)
-router.get('/events/edit/:id', eventsController.edit);      // Form edit event
-router.post('/events/update/:id', eventsController.update);  // Proses update event
-router.get('/events/create', eventsController.create);
-router.post('/events/create', eventsController.store);
-router.get('/events/delete/:id', eventsController.destroy);
+
+router.get('/events/create', eventsController.create)
+
+router.post('/events/create', eventsController.store)
 
 // go to event register page
 router.get("/eventRegis", (req, res) => {

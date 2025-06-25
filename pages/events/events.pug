@@ -51,6 +51,8 @@ html(lang='en')
     .blog_section.layout_padding
       .container
         h2.text-center.mb-4 Daftar Event Tersedia
+        .text-right.mb-3
+          a.btn.btn-primary(href='/eventRegis') Register Event
         if error
           .alert.alert-danger= error
         else if success
