@@ -67,6 +67,28 @@ class User {
       callback(null, { userId: results.insertId });
     });
   }
+
+  find(id, callback) {
+    const sql = 'SELECT * FROM user WHERE id_user = ?';
+    this.db.query(sql, [id], (err, rows) => {
+      if (err) return callback(err);
+      callback(null, rows[0]);
+    });
+  }
+
+  update(id, data, callback) {
+    const sql = `UPDATE user SET nama = ?, email = ?, password = ?, no_hp = ?, id_role = ? WHERE id_user = ?`;
+    const values = [data.nama, data.email, data.password, data.no_hp, data.id_role, id];
+    this.db.query(sql, values, callback);
+  }
+  delete(id, callback) {
+    const sql = 'DELETE FROM user WHERE id_user = ?';
+    this.db.query(sql, [id], (err, result) => {
+      if (err) return callback(err);
+      callback(null);
+    });
+  }
+
 }
 
 module.exports = User;

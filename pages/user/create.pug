@@ -5,6 +5,15 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Tambah User Baru
     link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css")
+    script.
+      function togglePassword() {
+        const passwordInput = document.getElementById('password');
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+        } else {
+          passwordInput.type = 'password';
+        }
+      }
   body
     .container.mt-5
       h2.mb-4 Tambah User Baru
@@ -27,7 +36,9 @@ html(lang="en")
 
         .mb-3
           label.form-label(for="password") Password
-          input.form-control(type="password", name="password", id="password", required)
+          .input-group
+            input.form-control(type="password", name="password", id="password", required)
+            button.btn.btn-outline-secondary(type="button", onclick="togglePassword()") 👁️
 
         .mb-3
           label.form-label(for="id_role") Role
@@ -40,3 +51,4 @@ html(lang="en")
         a.btn.btn-secondary.ms-2(href="/user") Batal
 
     script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js")
+

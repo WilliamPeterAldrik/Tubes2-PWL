@@ -1,4 +1,4 @@
-const User = require('../Model/User');
+const User = require('../model/User');
 
 const index = (req, res) => {
     const user = new User();
@@ -62,8 +62,62 @@ const store = (req, res) => {
   );
 };
 
+
+const edit = (req, res) => {
+  const user = new User();
+  const id = req.params.id;
+
+  user.find(id, (err, data) => {
+    if (err || !data) {
+      return res.render('user/edit', { error: 'User tidak ditemukan', user: {} });
+    }
+
+    res.render('user/edit', { user: data });
+  });
+};
+
+const update = (req, res) => {
+  const user = new User();
+  const id = req.params.id;
+
+  const updatedData = {
+    nama: req.body.nama,
+    email: req.body.email,
+    no_hp: req.body.no_hp,
+    password: req.body.password,
+    id_role: parseInt(req.body.id_role)
+  };
+
+  user.update(id, updatedData, (err, result) => {
+    if (err) {
+      return res.render('user/edit', {
+        error: 'Gagal mengupdate data user.',
+        user: { ...updatedData, id_user: id }
+      });
+    }
+
+    res.redirect('/user');
+  });
+};
+const destroy = (req, res) => {
+  const userId = req.params.id;
+  const user = new User();
+
+  user.delete(userId, (err) => {
+    if (err) {
+      console.error('Gagal menghapus user:', err);
+      return res.redirect('/user?error=Gagal menghapus user');
+    }
+
+    res.redirect('/user');
+  });
+};
+
 module.exports = {
   index,
   create,
   store,
+  edit,
+  update,
+  destroy, // tambahkan ini juga di export
 };

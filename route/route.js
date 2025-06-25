@@ -14,10 +14,12 @@ router.use(express.static('public'));
 // })
 
 router.get('/user', userController.index)
-
 router.get('/user/create', userController.create)
-
 router.post('/user/create', userController.store)
+router.get('/user/edit/:id', userController.edit);      // Form edit user
+router.post('/user/update/:id', userController.update);  // Proses update user
+router.get('/user/delete/:id', userController.destroy);
+
 
 // // go to events page after member login
 // router.get("/events", (req, res) => {
