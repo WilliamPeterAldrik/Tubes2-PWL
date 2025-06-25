@@ -20,7 +20,7 @@ const store = (req, res) => {
         lokasi: req.body.lokasi,
         poster: req.body.poster,
         biaya_regis: req.body.biaya_regis,
-        peserta_maks: req.body.perserta_maks,
+        peserta_maks: req.body.peserta_maks,
         deadline_regis: req.body.deadline_regis,
     }, (err, resultId) => {
         if (err) {

@@ -2,45 +2,22 @@
 const path = require('path');
 const express = require('express');
 const router = express.Router();
-const adminController = require('../controllers/AdminController');
+const userController = require('../controllers/UserController');
 const eventsController = require('../controllers/EventsController');
-const kegiatanController = require('../controllers/KegiatanController');
-const keuanganController = require('../controllers/KeuanganController');
 
 router.use(express.static('public'));
 
-// go to kegiatan page after tim kegiatan login
-// router.get("/kegiatan", (req, res) => {
-//     res.render('kegiatan/kegiatan');
-// })
-
-router.get('/kegiatan', kegiatanController.index)
-
-router.get('/kegiatan/create', kegiatanController.create)
-
-router.post('/kegiatan/create', kegiatanController.store)
-
-// go to keuangan page after tim keuangan login
-// router.get("/keuangan", (req, res) => {
-//     res.render('keuangan/keuangan');
-// })
-
-router.get('/keuangan', keuanganController.index)
-
-router.get('/keuangan/create', keuanganController.create)
-
-router.post('/keuangan/create', keuanganController.store)
 
 // // go to admin page after admin login
 // router.get("/admin", (req, res) => {
 //     res.render('admin/admin');
 // })
 
-router.get('/admin', adminController.index)
+router.get('/user', userController.index)
 
-router.get('/admin/create', adminController.create)
+router.get('/user/create', userController.create)
 
-router.post('/admin/create', adminController.store)
+router.post('/user/create', userController.store)
 
 // // go to events page after member login
 // router.get("/events", (req, res) => {

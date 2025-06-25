@@ -13,8 +13,8 @@ const server = http.createServer((req, res) => {
         case "/dashboard":
             fileLocation = "pages/dashboardAdmin.pug"
             break;
-        case "/admin":
-            fileLocation = "pages/admin.pug"
+        case "/user":
+            fileLocation = "pages/user.pug"
             break;
         case "/events":
             fileLocation = "pages/events.pug"

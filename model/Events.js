@@ -10,7 +10,7 @@ class Event {
     }
 
     all(callback) {
-        const query = "SELECT id_event, nama_event, lokasi, biaya_regis, perserta_maks, deadline_regis,id_kegiatan FROM event";
+        const query = "SELECT id_event, nama_event, lokasi, biaya_regis, peserta_maks, deadline_regis FROM event";
         this.db.query(query, (err, results,fields) => {
             if (err) throw err;
             const events = results.map(result => ({
@@ -18,9 +18,8 @@ class Event {
                 nama_event: result.nama_event,
                 lokasi: result.lokasi,
                 biaya_regis : result.biaya_regis,
-                peserta_maks : result.perserta_maks,
-                deadline_regis : result.deadline_regis,
-                id_kegiatan: result.id_kegiatan    
+                peserta_maks : result.peserta_maks,
+                deadline_regis : result.deadline_regis
             }));
             this.db.end(); // Tutup koneksi
             callback(events);
