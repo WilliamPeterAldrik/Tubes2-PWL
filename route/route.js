@@ -32,6 +32,11 @@ router.get('/events/create', eventsController.create)
 
 router.post('/events/create', eventsController.store)
 
+// go to event register page
+router.get("/eventRegis", (req, res) => {
+    res.render('eventRegis');
+})
+
 // go to register page
 router.get("/register", (req, res) => {
     res.render('register');

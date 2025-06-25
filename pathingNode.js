@@ -31,6 +31,9 @@ const server = http.createServer((req, res) => {
         case "/register":
             fileLocation = "pages/register.pug"
             break;
+        case "/eventRegis":
+            fileLocation = "pages/eventRegis.pug"
+            break;
         default:
             fileLocation = "pages/home.pug"
     }
