@@ -11,11 +11,11 @@ html(lang='en')
                 .title.login Login Member
             .form-container
                 .form-inner
-                    form.login(action='#')
+                    form.login(action='/login' method='POST' onsubmit="event.preventDefault(); window.location.href='/dashboardAdmin';")
                         .field
-                            input(type='text' placeholder='Email Address' required='')
+                            input(type='text' name='email' placeholder='Email Address' required='')
                         .field
-                            input(type='password' placeholder='Password' required='')
+                            input(type='password' name='password' placeholder='Password' required='')
 
                         .field.btn
                             .btn-layer

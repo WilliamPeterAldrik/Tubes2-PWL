@@ -10,13 +10,15 @@ html(lang='en')
             .title.signup Daftar Menjadi Member
         .form-container
             .form-inner
-                form.signup(action='#')
+                form.signup(action='/register' method='POST')
                     .field
-                        input(type='text' placeholder='Email Address' required='')
+                        input(type='text' name='nama' placeholder='Nama Lengkap' required='')
                     .field
-                        input(type='password' placeholder='Password' required='')
+                        input(type='text' name='email' placeholder='Email Address' required='')
                     .field
-                        input(type='password' placeholder='Confirm password' required='')
+                        input(type='password' name='password' placeholder='Password' required='')
+                    .field
+                        input(type='text' name='no_hp' placeholder='No HP' required='')
                     .field.btn
                         .btn-layer
                         input(type='submit' value='Sign Up')
